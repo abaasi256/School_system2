@@ -72,4 +72,9 @@ class UserRepo {
     {
         return BloodGroup::orderBy('name')->get();
     }
+
+    public function getUserTypeCounts()
+    {
+        return User::groupBy('user_type')->selectRaw('count(*) as count, user_type')->pluck('count', 'user_type');
+    }
 }

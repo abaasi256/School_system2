@@ -8,7 +8,7 @@
                <div class="card card-body bg-blue-400 has-bg-image">
                    <div class="media">
                        <div class="media-body">
-                           <h3 class="mb-0">{{ $users->where('user_type', 'student')->count() }}</h3>
+                           <h3 class="mb-0">{{ $users_count->get('student', 0) }}</h3>
                            <span class="text-uppercase font-size-xs font-weight-bold">Total Students</span>
                        </div>
 
@@ -23,7 +23,7 @@
                <div class="card card-body bg-danger-400 has-bg-image">
                    <div class="media">
                        <div class="media-body">
-                           <h3 class="mb-0">{{ $users->where('user_type', 'teacher')->count() }}</h3>
+                           <h3 class="mb-0">{{ $users_count->get('teacher', 0) }}</h3>
                            <span class="text-uppercase font-size-xs">Total Teachers</span>
                        </div>
 
@@ -42,7 +42,7 @@
                        </div>
 
                        <div class="media-body text-right">
-                           <h3 class="mb-0">{{ $users->where('user_type', 'admin')->count() }}</h3>
+                           <h3 class="mb-0">{{ $users_count->get('admin', 0) }}</h3>
                            <span class="text-uppercase font-size-xs">Total Administrators</span>
                        </div>
                    </div>
@@ -57,7 +57,7 @@
                        </div>
 
                        <div class="media-body text-right">
-                           <h3 class="mb-0">{{ $users->where('user_type', 'parent')->count() }}</h3>
+                           <h3 class="mb-0">{{ $users_count->get('parent', 0) }}</h3>
                            <span class="text-uppercase font-size-xs">Total Parents</span>
                        </div>
                    </div>
