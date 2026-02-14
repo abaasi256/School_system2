@@ -38,8 +38,8 @@ class HomeController extends Controller
     public function dashboard()
     {
         $d=[];
-        if(Qs::userIsTeamSAT()){
-            $d['users'] = $this->user->getAll();
+        if(Qs::userIsTeamSA()){
+            $d['users_count'] = $this->user->getUserTypeCounts();
         }
 
         return view('pages.support_team.dashboard', $d);
